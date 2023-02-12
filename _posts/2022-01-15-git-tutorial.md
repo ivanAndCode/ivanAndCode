@@ -1,5 +1,5 @@
 ---
-title:  "Welcome to my blog"
+title:  "Git tutorial"
 layout: post
 ---
 
