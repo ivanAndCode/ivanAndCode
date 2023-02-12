@@ -3,5 +3,5 @@ title:  "Welcome to my blog"
 layout: post
 ---
 
-Here's a series of videos that will teach you fundamental interactions with Git.
-{% include embed.html url="https://youtu.be/31OtjoLEExE" %}
+Here's a series of videos that will teach you fundamental interactions with Git.  
+<iframe width="640" height="480" src="https://youtu.be/31OtjoLEExE" frameborder="0"> </iframe>
