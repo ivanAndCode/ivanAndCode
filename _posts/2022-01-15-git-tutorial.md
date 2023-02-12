@@ -1,6 +1,7 @@
 ---
 title:  "Git tutorial"
 layout: post
+excerpt_separator: <!--more-->
 ---
 
 Here's a series of videos that will teach you fundamental interactions with Git.  
