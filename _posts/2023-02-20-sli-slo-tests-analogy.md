@@ -8,25 +8,26 @@ excerpt_separator: <!--more-->
 Photo by <a href="https://unsplash.com/it/@mvdheuvel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Maarten van den Heuvel</a> on <a href="https://unsplash.com/photos/s9XMNEm-M9c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 ## Context
-Today I've attended the "brown bag" session about observability aka o11y.  
+Today I attended the "brown bag" session about observability aka o11y.  
 At first, the [speaker](https://www.linkedin.com/in/simon-w-0b7a201a/) (hi, Simon!) was talking about alerts. Do they provide good insight into what is going on with the system? Are they enough?  
 
-For example, a situation when you did `run of the disk space` on the instance that runs your host.  
+For example, a situation when you did `run of the disk space` on the instance that runs your code.  
 Do you need to alert somebody about it? Yes! Is it enough? No! 😅
 
-Why though? 🤔
+Why though? 🤔  
 <!--more-->
 Can we not create all sorts of alerts for our infrastructure metrics + alerts on the logs of our system? We can!   
 
 ## What to do?
-Now imagine the engineer on call receives an alert - `low disk space`, what should they do? 
+Now imagine the engineer on call receiving an alert - `low disk space`, what should they do? 
 - drop everything and attempt to fix it
-- raise an incident
+- raise an incident and ask for help
+- ping somebody
 - do nothing and wait
 - ...something else?
 
-This choice is hard in itself, and different people would choose different answer.  
-Now, multiply this by `X alert` and `Y services` and you'll see how it snowballs out of control.
+This choice is hard in itself, and different people would choose a different answer.  
+Now, multiply this by `X alerts` and `Y services` and you'll see how it snowballs out of control.
 
 What do we do then?
 
@@ -34,26 +35,26 @@ What do we do then?
 To answer this question, let's talk about another thing - `service level indicators` (SLIs)
 > SLI is a defined quantitative measure of some aspect of the system
 
-Typical SLI:
+Typical SLIs are:
  - request latency
  - error rate
  - throughput
  - etc.
 
-If you have this data, whether it's a dashboard, or alert, or both, you would be able to correlate `low level signal` (aka out of disk space) to the `impact on system behaviour` (these specific endpoints suddenly started to be slow, error rates are growing)  
+If you have SLI data, you would be able to correlate `low-level signal` (aka out of disk space) to the `impact on system behaviour` (these specific endpoints suddenly started to be slow, and error rates are growing)  
 
-Still, where does the tests of different types come to the picture?
+Still, where do the tests of different types come into the picture?
 
 ## Tests are observability too?
-Not in a traditional sense, but they have some aspects of it. When they run, they provide you data about your system.
+Not in a traditional sense, but they have some aspects of it. When they run, they provide you with data about your system.
 
 ### Unit test
-Let's look at the unit test that checks `validateUser(user)` function
+Let's look at the unit test that checks the `validateUser(user)` function
 > validateUser() function  
 > should return true  
-> when called with valid user
+> when called with a valid user
 
-⬆ if this test fails, how much data do you get? You will know exactly `what` is wrong, but not `why is it a problem?`.
+⬆ if this test fails, how much data do you get? You will know exactly `what` is wrong, but not `why is it a problem?`. It's not working, so what?!
 
 ### API test
 Imagine we had another test that checks the endpoint `POST baseUrl/addUser` works well
@@ -69,13 +70,20 @@ This gives you more of a `system behaviour` vibe. Let's go up a level and look a
 > Then new user account is created   
 > And user is redirected to the /index page
 
-This test is describing a behaviour from the user perspective.
+This test is describing a behaviour from the user's perspective.  
+Now you could be emphatic and `feel the pain`. 
+
+This brings us to the next logical question - `which tests do I need?`
 
 ### Which tests do I need?
 You need all of them. They work well together and provide different perspectives on the system under test.  
-Same like for `low-level alert` and `SLI`, you need to have both to make an assessment of the impact and choose the right course of action. 
+Same as for `low-level alert` and `SLI`, you need to have both to make an assessment of the impact and choose the right course of action. 
 
-Unit test tells you `exctly what is wrong`, UI-level test will tell you `why is it a problem to your user`.
+The unit test tells you `exactly what is wrong`, UI-level test will tell you `why is it a problem to your user`.
+
+![Genius](../assets/posts/2023_02_20_genius.jpg)
+Photo by <a href="https://unsplash.com/@andrewjoegeorge?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrew George</a> on <a href="https://unsplash.com/photos/g-fm27_BRyQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
 
 ## Summary
 Write tests!  
