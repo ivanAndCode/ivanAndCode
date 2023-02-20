@@ -72,7 +72,7 @@ This gives you more of a `system behaviour` vibe. Let's go up a level and look a
 > And user is redirected to the /index page
 
 This test is describing a behaviour from the user's perspective.  
-Now you could be emphatetic and `feel the pain`. 
+Now you could be empathetic and `feel the pain`. 
 
 This brings us to the next logical question - `which tests do I need?`
 
