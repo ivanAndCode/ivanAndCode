@@ -16,10 +16,11 @@ Do you need to alert somebody about it? Yes! Is it enough? No! 😅
 
 Why though? 🤔  
 <!--more-->
-Can we not create all sorts of alerts for our infrastructure metrics + alerts on the logs of our system? We can!   
+Can we not create all sorts of alerts for our infrastructure metrics + alerts on the logs of our system? We can!  
+But this might bring another set of challenges, like `too much noise`!
 
 ## What to do?
-Now imagine the engineer on call receiving an alert - `low disk space`, what should they do? 
+Imagine the engineer on call receiving an alert - `low disk space`, what should they do? 
 - drop everything and attempt to fix it
 - raise an incident and ask for help
 - ping somebody
