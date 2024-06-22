@@ -26,8 +26,7 @@ Buckle up! Let's go!
 
 
 ## How you can help 
-### subscribe
-[![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://patreon.com/ivanAndLife) 
-
-### buy a course
-Udemy link is coming soon! (tm)
+There are many ways! Just following me on social media and interacting with a content is a big enough reward. If you do that, thank you! You are amazing!♥️  
+But if you want to do more, consider the following:
+* 1 - subscribe to [![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://patreon.com/ivanAndLife) 
+* 2 - buy a course (Udemy link is coming soon!)
