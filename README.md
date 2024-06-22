@@ -2,7 +2,7 @@
 Hi, I'm Ivan, also known as "IvanAndCode"
 I'm an experienced test engineer currently focussing on helping people be better at test automation.
 
-I’ve been in testing and test automation for around two decades. As part of my recent “test leadership” role where I had a “Principal Quality Assistant Engineer” title, I started spending more and more time teaching others. And I quickly realised that I liked it very much
+I’ve been in testing and test automation for around two decades. As part of my recent “test leadership” role, I started spending more and more time teaching others. And I quickly realised that I liked it very much
 But... 1-on-1 coaching doesn’t scale. There’s only one me and many of you. So here we are… doing the courses. Now you also get a chance to learn something from me.
 
 If you are a junior test engineer or someone experienced who has never automated, I can help you. I specialise in the JavaScript ecosystem because it is a language of the web and learning it allows you to be a "full-stack" test engineer.
